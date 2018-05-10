@@ -1,0 +1,15 @@
+
+---
+- 
+  name: This will setup a httpd webserver
+  remote_user: root
+  hosts: localhost
+  become: yes
+  sudo: yes
+ 
+  tasks:
+  - name: Ensure that Apache is installed
+    yum: name=httpd state=present
+
+  - name: Start Apache Services
+    service: name=httpd enabled=yes state=started

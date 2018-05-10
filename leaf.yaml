@@ -1,0 +1,8 @@
+
+---
+-name: Install common software requirements
+ yum: pkg={{ item }} state=installed
+ with_items: 
+#   - git
+#   - ntp
+#   - vim
